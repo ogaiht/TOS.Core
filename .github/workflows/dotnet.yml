@@ -48,3 +48,6 @@ jobs:
       
     - name: Test
       run: dotnet test TOS.Core.sln --verbosity normal /property:CollectionCoverage=true /property:CoverletOutputFormat=opencover
+
+    - name: Creating Packages
+      run: dotnet pack TOS.Core.sln --no-restore /property:Configuration=Release /property:Version=$VERSION
