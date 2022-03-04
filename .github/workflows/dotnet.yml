@@ -20,13 +20,13 @@ jobs:
         dotnet-version: 5.0.x
     
     - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup@0.9.7
+      uses: gittools/actions/gitversion/setup@v0.9.7
       with:
         versionSpec: '5.5.0'
     
     - name: Calculate Build Version
       id: gitversion
-      uses: gittools/actions/gitversion/execute@0.9.7
+      uses: gittools/actions/gitversion/execute@v0.9.7
       
     - name: Set VERSION
       run: |
