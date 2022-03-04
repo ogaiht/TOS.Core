@@ -45,4 +45,4 @@ jobs:
     - name: Build
       run: dotnet build TOS.Core.sln --no-restore /property:Configuration=Release /property:Version=$VERSION
     - name: Test
-      run: dotnet test TOS.Core.sln --no-build --verbosity normal /property:Configuration=Release /property:Version=$VERSION --output
+      run: dotnet test TOS.Core.sln --no-build --verbosity --output
