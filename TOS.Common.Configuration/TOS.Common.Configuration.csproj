@@ -6,6 +6,7 @@
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RepositoryUrl>https://github.com/ogaiht/TOS.Core</RepositoryUrl>
   </PropertyGroup>
   
   <ItemGroup>
