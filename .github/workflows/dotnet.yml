@@ -43,6 +43,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build TOS.Core.sln --no-restore Release /p:Version=${VERSION}
+      run: dotnet build TOS.Core.sln --no-restore Release  /property:Configuration=Release /property:Version=0.0.1
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal Release /p:Version=${VERSION} --output
