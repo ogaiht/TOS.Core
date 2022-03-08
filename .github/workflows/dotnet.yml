@@ -36,13 +36,21 @@ jobs:
       run: |
         echo ${{ steps.gitversion.outputs.semVer }}.${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}-${{ steps.gitversion.outputs.ShortSha}}
         echo "VERSION=$(echo ${{ steps.gitversion.outputs.semVer }}.${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}-$(echo ${{ steps.gitversion.outputs.ShortSha}} | sed 's/^[0-9]*//'))" >> $GITHUB_ENV
-    
+        
     - name: Print VERSION
       run: echo "VERSION - $VERSION"
       
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
-      run: dotnet build TOS.Core.sln --no-restore /property:Configuration=Release /property:Version=0.0.1
-#    - name: Test
-#      run: dotnet test --no-build --verbosity normal Release /p:Version=${VERSION} --output
+      run: dotnet build TOS.Core.sln --no-restore /property:Configuration=Release /property:Version=$VERSION
+      
+    - name: Test
+      run: dotnet test TOS.Core.sln --verbosity normal /property:CollectionCoverage=true /property:CoverletOutputFormat=opencover
+
+    - name: Creating Packages
+      run: dotnet pack TOS.Core.sln --no-restore /property:Configuration=Release /property:Version=$VERSION  /property:NuGetVersion=$VERSION -o out
+
+    - name: Push Packages
+      run: dotnet nuget push ${{ github.workspace }}/out/*.nupkg --skip-duplicate --no-symbols true --source https://nuget.pkg.github.com/ogaiht/index.json --api-key ${{ secrets.PACKAGE_PUBLISHER_TOKEN }}
