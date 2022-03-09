@@ -36,7 +36,7 @@ jobs:
       run: |
         echo ${{ steps.gitversion.outputs.semVer }}.${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}-${{ steps.gitversion.outputs.ShortSha}}
         echo "VERSION=$(echo ${{ steps.gitversion.outputs.semVer }}.${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}-$(echo ${{ steps.gitversion.outputs.ShortSha}} | sed 's/^[0-9]*//'))" >> $GITHUB_ENV
-        echo "SHORT_VERSION=$(echo ${{ steps.gitversion.outputs.semVer }}.${{ steps.gitversion.outputs.commitsSinceVersionSourcePadded }}" >> $GITHUB_ENV
+        echo "SHORT_VERSION=$(echo ${{ steps.gitversion.outputs.semVer }})" >> $GITHUB_ENV
         
     - name: Print VERSION
       run: echo "VERSION - $VERSION"
