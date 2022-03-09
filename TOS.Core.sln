@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0BAE8572
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOS.Common.Tests", "Tests\TOS.Common.Tests\TOS.Common.Tests.csproj", "{8A49D314-FD1B-4971-87D9-3AE78191C51D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOS.Extensions.Logging", "TOS.Extensions.Logging\TOS.Extensions.Logging.csproj", "{8E58E8E0-B9B6-4F71-B19C-37A2B5897D7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{8A49D314-FD1B-4971-87D9-3AE78191C51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A49D314-FD1B-4971-87D9-3AE78191C51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A49D314-FD1B-4971-87D9-3AE78191C51D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E58E8E0-B9B6-4F71-B19C-37A2B5897D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E58E8E0-B9B6-4F71-B19C-37A2B5897D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E58E8E0-B9B6-4F71-B19C-37A2B5897D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E58E8E0-B9B6-4F71-B19C-37A2B5897D7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
