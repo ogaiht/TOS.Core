@@ -8,7 +8,7 @@ namespace TOS.Common.Text.Semantics
         public static IServiceCollection AddSemantics(this IServiceCollection serviceCollection)
         {
             return serviceCollection
-                .AddSingleton<IPlurilizer, Plurilizer>();
+                .AddSingleton<IPluralizer, Pluralizer>();
         }
     }
 }

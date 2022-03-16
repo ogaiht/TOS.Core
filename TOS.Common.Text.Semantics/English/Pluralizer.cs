@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TOS.Common.Text.Semantics.English
 {
-    public class Plurilizer : IPlurilizer
+    public class Pluralizer : IPluralizer
     {
         private static readonly Dictionary<string, string> _exceptions = new Dictionary<string, string>() {
                 { "man", "Men" },
@@ -50,7 +50,7 @@ namespace TOS.Common.Text.Semantics.English
             return false;
         }
 
-        public string Plurilize(string text)
+        public string Pluralize(string text)
         {
             if (CheckExceptions(text, out string plural))
             {
