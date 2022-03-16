@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOS.Common.Tests", "Tests\T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOS.Extensions.Logging", "TOS.Extensions.Logging\TOS.Extensions.Logging.csproj", "{8E58E8E0-B9B6-4F71-B19C-37A2B5897D7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOS.Data", "TOS.Data\TOS.Data.csproj", "{3782D589-D66A-4B7E-B544-F520F65F2C28}" 
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOS.Data", "TOS.Data\TOS.Data.csproj", "{3782D589-D66A-4B7E-B544-F520F65F2C28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
