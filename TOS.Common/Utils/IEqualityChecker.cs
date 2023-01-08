@@ -2,7 +2,7 @@
 {
     public interface IEqualityChecker
     {
-        bool AreEquals(object first, object second);
-        bool AreEquals(string first, string second, bool ignoreCase = false);
+        bool AreEqual(object first, object second);
+        bool AreEqual(string first, string second, bool ignoreCase = false);
     }
 }

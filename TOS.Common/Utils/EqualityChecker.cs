@@ -2,14 +2,14 @@
 {
     public class EqualityChecker : IEqualityChecker
     {
-        public bool AreEquals(object first, object second)
+        public bool AreEqual(object first, object second)
         {
-            return EqualityHelper.AreEquals(first, second);
+            return EqualityHelper.AreEqual(first, second);
         }
 
-        public bool AreEquals(string first, string second, bool ignoreCase = false)
+        public bool AreEqual(string first, string second, bool ignoreCase = false)
         {
-            return EqualityHelper.AreEquals(first, second, ignoreCase);
+            return EqualityHelper.AreEqual(first, second, ignoreCase);
         }
     }
 }

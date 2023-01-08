@@ -12,17 +12,17 @@ namespace TOS.Common.Utils
             }
         }
 
-        public void CheckInvalidOperationException(bool check, string message)
+        public void CheckInvalidOperationException(bool passesCheck, string message)
         {
-            if (check)
+            if (!passesCheck)
             {
                 throw new InvalidOperationException(message);
             }
         }
 
-        public void CheckArgumentException(bool check, string message, string parameterName)
+        public void CheckArgumentException(bool passesCheck, string message, string parameterName)
         {
-            if (check)
+            if (!passesCheck)
             {
                 throw new ArgumentException(message, parameterName);
             }
